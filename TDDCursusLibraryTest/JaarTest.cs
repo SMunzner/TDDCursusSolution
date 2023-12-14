@@ -10,13 +10,15 @@ namespace TDDCursusLibraryTest
         //{
         //}
         // Een Jaar Deelbaar Door 400 Is Een Schrikkeljaar
-        [TestMethod]
+        //[TestMethod]
+        [TestMethod("Een jaar deelbaar door 400 is een schrikkeljaar")]
         public void IsSchrikkeljaar_DeelbaarDoor400_IsEenSchrikkeljaar()
         {
             // Arrange
             // Act
             // Assert
-            Assert.AreEqual(true, new Jaar(2000).IsSchrikkeljaar);
+            //Assert.AreEqual(true, new Jaar(2000).IsSchrikkeljaar);
+            Assert.IsTrue(new Jaar(2000).IsSchrikkeljaar);
         }
         // Een Jaar Deelbaar Door 100 Maar Niet Door 400 Is Geen Schrikkeljaar
         [TestMethod]
@@ -25,7 +27,8 @@ namespace TDDCursusLibraryTest
             // Arrange
             // Act
             // Assert
-            Assert.AreEqual(false, new Jaar(1900).IsSchrikkeljaar);
+            //Assert.AreEqual(false, new Jaar(1900).IsSchrikkeljaar);
+            Assert.IsFalse(new Jaar(1900).IsSchrikkeljaar);
         }
         // Een Jaar Deelbaar Door 4 Is Een Schrikkeljaar
         [TestMethod]
@@ -34,7 +37,8 @@ namespace TDDCursusLibraryTest
             // Arrange
             // Act
             // Assert
-            Assert.AreEqual(true, new Jaar(2012).IsSchrikkeljaar);
+            //Assert.AreEqual(true, new Jaar(2012).IsSchrikkeljaar);
+            Assert.IsTrue(new Jaar(2012).IsSchrikkeljaar);
         }
         // Een Jaar Niet Deelbaar Door 4 Is Geen Schrikkeljaar
         [TestMethod]
@@ -43,7 +47,8 @@ namespace TDDCursusLibraryTest
             // Arrange
             // Act
             // Assert
-            Assert.AreEqual(false, new Jaar(2015).IsSchrikkeljaar);
+            //Assert.AreEqual(false, new Jaar(2015).IsSchrikkeljaar);
+            Assert.IsFalse(new Jaar(2015).IsSchrikkeljaar);
         }
     }
 }
